@@ -1,0 +1,1503 @@
+:root {
+    --primary-color:rgb(179, 51, 51);
+    --primary-hover:rgb(170, 111, 111);
+    --primary-light: rgba(138, 21, 56, 0.1);
+    --pastel-maroon:rgb(163, 57, 57);
+}
+
+/* Common Button Outline Styles */
+.btn {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Primary Custom Button with Outline */
+.btn-custom {
+    background-color: var(--pastel-maroon);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-custom:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Sidebar Navigation Links Outline */
+.nav-link {
+    background-color: white;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active,
+.nav-link[aria-expanded="true"] {
+    background-color: var(--pastel-maroon) !important;
+    color: white !important;
+    border-color: var(--primary-color);
+}
+
+/* Sub Navigation Links Outline */
+.sub-nav .nav-link {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color) !important;
+    padding-left: 2.5rem;
+}
+
+.sub-nav .nav-link:hover {
+    background-color: var(--pastel-maroon) !important;
+    color: white !important;
+}
+
+/* Sidebar Toggle Button Outline */
+#sidebarToggle {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#sidebarToggle:hover {
+    background-color: var(--pastel-maroon);
+    color: white;
+}
+
+
+/* Admin Dropdown Button Outline */
+.dropdown .btn-custom {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown .btn-custom:hover,
+.dropdown .btn-custom:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dropdown Items Outline */
+.dropdown-item {
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--pastel-maroon);
+    color: var(--primary-color);
+}
+
+/* Logout Button Outline */
+.dropdown-item.text-danger {
+    color: var(--primary-color) !important;
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+}
+
+.dropdown-item.text-danger:hover {
+    background-color: var(--pastel-maroon);
+}
+
+/* Focus States for All Buttons */
+.btn:focus,
+.nav-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(138, 21, 56, 0.25);
+}
+
+/* Sidebar and Navigation */
+.sidebar {
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+/* Brand Text */
+.brand-text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Collapse Icons */
+.bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.collapsed .bi-chevron-down {
+    transform: rotate(-90deg);
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+/* Remove default blue focus outline */
+.nav-link:focus,
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Mobile Responsive Sidebar */
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        height: 100vh;
+        width: 280px;
+        z-index: 1045;
+        transition: left 0.3s ease;
+        background-color: #f8f9fa;
+    }
+
+    .sidebar.show {
+        left: 0;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1040;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+}
+
+/* Override any Bootstrap default focus styles */
+.btn:focus, 
+.nav-link:focus,
+.dropdown-item:focus {
+    box-shadow: none !important;
+}
+
+/* Form control focus */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(138, 21, 56, 0.25);
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+/* Updated Event Item Styles */
+.events-list {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.school-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.school-link:hover {
+    transform: scale(1.05);
+}
+
+.school-link img {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Additional Event Item Styling */
+.event-item .badge {
+    background-color:rgb(173, 55, 55);
+    color: white;
+}
+
+.event-item:hover .text-muted {
+    color:rgb(138, 37, 37) !important;
+}
+
+.event-item .dropdown-toggle:after {
+    display: none;
+}
+
+/* Bottom Nav Item Styles */
+.bottom-nav-item {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-circle-link {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: white !important;
+    border: 2px solid rgb(138, 37, 37) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: all 0.3s ease;
+}
+
+.nav-circle-link i {
+    font-size: 1.5rem;
+    color: rgb(179, 54, 54);
+    transition: all 0.3s ease;
+}
+
+.nav-circle-link:hover, 
+.nav-circle-link:focus {
+    background-color: rgb(163, 57, 57) !important;
+}
+
+.nav-circle-link:hover i, 
+.nav-circle-link:focus i {
+    color: white !important;
+}
+
+/* Updated Dropup Menu Styles */
+.bottom-nav-item .dropup .dropdown-menu {
+    bottom: 100%;
+    margin-bottom: 10px;
+    left: 0 !important;
+    min-width: 200px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.bottom-nav-item .dropdown-item {
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+/* Updated hover states */
+.bottom-nav-item .dropdown-item:hover {
+    background-color: rgba(138, 37, 37, 0.1);
+    color: rgb(196, 75, 75);
+}
+
+.bottom-nav-item .dropdown-item.text-danger:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+    color:rgb(184, 65, 65);
+}
+
+.bottom-nav-item .dropdown-divider {
+    margin: 0.5rem 0;
+    border-color: rgba(0,0,0,0.1);
+}
+
+/* Arrow styling */
+.bottom-nav-item .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transform: rotate(45deg);
+}
+
+/* Fixed position for bottom nav */
+.bottom-nav-item .dropup {
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* Ensure dropdown menu appears above other elements */
+.bottom-nav-item .dropdown-menu.show {
+    position: absolute !important;
+    z-index: 1001;
+}
+
+/* Prevent page scroll when dropdown is open */
+.dropdown-menu.show {
+    position: absolute !important;
+}
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0;
+    }
+
+    /* Dashboard Cards */
+    .dashboard-card {
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        transition: transform 0.2s, box-shadow 0.2s;
+        background: #ffffff;
+        height: 100%;
+    }
+
+    .dashboard-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Events Section */
+    .current-date {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    .event-badge {
+        display: inline-block;
+        padding: 0.35em 0.65em;
+        font-size: 0.75em;
+        font-weight: 500;
+        line-height: 1;
+        color: #fff;
+        background-color: #be4f4f;
+        border-radius: 0.25rem;
+    }
+
+    .event-title {
+        font-size: 1rem;
+        color: #2c3e50;
+    }
+
+    /* Chart Section */
+    .chart-container {
+        position: relative;
+        height: 250px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .stats-total {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #2c3e50;
+    }
+
+    /* Header section styling */
+    .header-section {
+        background-color: #f8f9fa;  /* Light background */
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .header-icon {
+        font-size: 1.66rem;  /* Bigger icon size */
+        color: var(--primary-color);     /* Bootstrap primary blue */
+    }
+    
+    .header-button {
+        font-size: 1.2rem;  /* Bigger button text */
+    }
+    
+    /* Main content section styling */
+    .main-content-section {
+        color: #212529;     /* Dark gray for better readability */
+        font-size: 1.1rem;  /* Bigger content text */
+    }
+    
+    /* If you want to style specific elements within the content */
+    .main-content-section h1,
+    .main-content-section h2,
+    .main-content-section h3 {
+        color: var(--primary-color);    /* Bootstrap primary blue for headings */
+        font-size: 2rem;    /* Larger heading size */
+        margin-bottom: 1rem;
+    }
+    
+    .main-content-section p {
+        line-height: 1.6;   /* Better line height for readability */
+    }
+    
+    /* Enhanced styling while maintaining original structure */
+   .col-md-6 .card {
+       border: none;
+       box-shadow: 0 0 20px rgba(179, 51, 51, 0.08);
+       border-radius: 12px;
+       background: #ffffff;
+       margin-bottom: 1.5rem;
+   }
+   
+   .card-header {
+    background: linear-gradient(135deg, var(--primary-color), #ff8c69);
+       /* Alternative gradients you might like:
+       background: linear-gradient(135deg, rgb(179, 51, 51), #ffa07a);
+       background: linear-gradient(135deg, var(--pastel-maroon), #ffb347);
+       */
+       border-bottom: none;
+       padding: 1.25rem;
+   }
+   
+   .card-header .card-title {
+       color: #ffffff;
+       font-size: 1.25rem;
+       font-weight: 600;
+       display: flex;
+       align-items: center;
+   }
+   
+   .card-header .btn-primary {
+       background: rgba(255, 255, 255, 0.9);
+       color: var(--primary-color);
+       border: none;
+       padding: 0.5rem 1rem;
+       border-radius: 20px;
+       font-weight: 500;
+       transition: all 0.3s ease;
+   }
+   
+   .card-header .btn-primary:hover {
+       background: #ffffff;
+       transform: translateY(-2px);
+       box-shadow: 0 4px 8px rgba(179, 51, 51, 0.2);
+   }
+   
+   .card-body {
+       padding: 1.5rem;
+   }
+   
+   /* Event Item Styling */
+   .event-item {
+       background: #f8f9fa;
+       border-radius: 10px;
+       padding: 1.25rem;
+       margin-bottom: 1rem;
+       border: 1px solid rgba(179, 51, 51, 0.1) !important;
+       transition: all 0.3s ease;
+   }
+   
+   .event-item:hover {
+       transform: translateY(-3px);
+       box-shadow: 0 5px 15px rgba(179, 51, 51, 0.08);
+       background: #ffffff;
+   }
+   
+   .event-item h6 {
+       color: var(--primary-color);
+       font-size: 1.1rem;
+       font-weight: 600;
+       margin-bottom: 0.75rem;
+   }
+   
+   .event-item .text-muted {
+       background: rgba(179, 51, 51, 0.1);
+       padding: 0.4rem 0.8rem;
+       border-radius: 15px;
+       display: inline-block;
+       color: var(--primary-color) !important;
+   }
+   
+   .event-item .text-muted i {
+       color: var(--primary-color);
+       margin-right: 0.3rem;
+   }
+   
+   .event-item .small.text-muted {
+       background: transparent;
+       padding: 0;
+       color: #6c757d !important;
+       margin-top: 0.75rem;
+       display: block;
+   }
+   
+   /* Button Group Styling */
+   .btn-group-sm .btn {
+       padding: 0.4rem 0.8rem;
+       border-radius: 6px;
+       transition: all 0.2s ease;
+   }
+   
+   .btn-outline-primary {
+       border-color: var(--primary-color);
+       color: var(--primary-color);
+   }
+   
+   .btn-outline-primary:hover {
+       background-color: rgba(179, 51, 51, 0.1);
+       border-color: var(--primary-color);
+       color: var(--primary-color);
+   }
+   
+   .btn-outline-danger {
+       border-color: var(--primary-color);
+       color: var(--primary-color);
+   }
+   
+   .btn-outline-danger:hover {
+       background-color: rgba(179, 51, 51, 0.1);
+       border-color: var(--primary-color);
+       color: var(--primary-color);
+   }
+   
+   /* Empty State Styling */
+   .text-center.py-4 {
+       padding: 3rem 1rem !important;
+   }
+   
+   .text-center.py-4 .display-4 {
+       font-size: 3.5rem;
+       color: var(--primary-color);
+       opacity: 0.3;
+       margin-bottom: 1rem;
+   }
+   
+   .text-center.py-4 .text-muted {
+       color: var(--primary-color) !important;
+       font-size: 1.1rem;
+       margin-bottom: 1.5rem;
+       opacity: 0.7;
+   }
+   
+   .text-center.py-4 .btn-outline-primary {
+       padding: 0.5rem 1.5rem;
+       border-radius: 20px;
+       transition: all 0.3s ease;
+   }
+   
+   .text-center.py-4 .btn-outline-primary:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 4px 8px rgba(179, 51, 51, 0.2);
+   }
+   
+   /* Animation with warm colors */
+   @keyframes fadeIn {
+       from {
+           opacity: 0;
+           transform: translateY(10px);
+           background: linear-gradient(135deg, var(--primary-color), #ff9966);
+       }
+       to {
+           opacity: 1;
+           transform: translateY(0);
+           background: #f8f9fa;
+       }
+   }
+   
+   .event-item {
+       animation: fadeIn 0.3s ease-out forwards;
+   }
+   
+   /* Responsive Adjustments */
+   @media (max-width: 768px) {
+       .card-body {
+           padding: 1rem;
+       }
+       
+       .event-item {
+           padding: 1rem;
+       }
+       
+       .text-muted {
+           display: block;
+           margin-bottom: 0.5rem;
+       }
+   }
+   
+   /* Custom Scrollbar with theme colors */
+   .card-body::-webkit-scrollbar {
+       width: 6px;
+   }
+   
+   .card-body::-webkit-scrollbar-track {
+       background: #f1f1f1;
+   }
+   
+   .card-body::-webkit-scrollbar-thumb {
+       background: linear-gradient(to bottom, var(--primary-color), #ff9966);
+       border-radius: 3px;
+   }
+   
+   /* Hover glow effect */
+   .card:hover {
+       box-shadow: 0 0 25px rgba(179, 51, 51, 0.15);
+   }
+   
+   /* Button hover effects */
+   .btn:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 4px 8px rgba(179, 51, 51, 0.2);
+   }
+   
+
+/* Schools Section Styling */
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color), #ff9966);
+    border-radius: 2px;
+}
+
+/* School Card Styling */
+.school-card {
+    border: none;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(179, 51, 51, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(179, 51, 51, 0.15);
+}
+
+/* Logo Container */
+.logo-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(179, 51, 51, 0.05), rgba(255, 153, 102, 0.05));
+}
+
+.school-logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.school-card:hover .school-logo {
+    transform: scale(1.05);
+}
+
+.default-logo {
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+/* Card Body */
+.school-name {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.school-info {
+    margin-top: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(179, 51, 51, 0.05);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: rgba(179, 51, 51, 0.1);
+}
+
+.info-item i {
+    min-width: 24px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.info-item span {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+/* Card Footer */
+.card-footer {
+    background: linear-gradient(135deg, rgba(179, 51, 51, 0.05), rgba(255, 153, 102, 0.05));
+    border-top: 1px solid rgba(179, 51, 51, 0.1);
+}
+
+.btn-group .btn {
+    flex: 1;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-outline-info {
+    border-color: #ff9966;
+    color: #ff9966;
+}
+
+.btn-outline-info:hover {
+    background: #ff9966;
+    color: #ffffff;
+}
+
+/* Add School Button */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #ff9966);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(179, 51, 51, 0.2);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.col {
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-container {
+        height: 100px;
+    }
+    
+    .school-name {
+        font-size: 1rem;
+    }
+    
+    .info-item {
+        padding: 0.4rem;
+    }
+}
+
+/* Loading State */
+.school-card.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.school-card.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(179, 51, 51, 0.05), 
+        rgba(255, 153, 102, 0.1), 
+        rgba(179, 51, 51, 0.05));
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.legend-dot.competent {
+    background-color: rgba(40, 167, 69, 0.85);
+}
+.legend-dot.incompetent {
+    background-color: var(--primary-color);
+}
+.chart-container {
+    filter: drop-shadow(0px 10px 4px rgba(0,0,0,0.2));
+}
+
+.sidebar {
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1030;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    width: 280px;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-280px);
+}
+
+.flex-grow-1 {
+    margin-left: 280px;
+    transition: margin-left 0.3s ease;
+}
+
+#sidebarToggle {
+    background: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 280px;
+    top: 13%;
+    transform: translateY(-50%);
+    z-index: 1040;
+    transition: left 0.3s ease;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.sidebar.collapsed + div #sidebarToggle {
+    left: 0;
+}
+
+#sidebarToggle .bi-chevron-left {
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed + div #sidebarToggle .bi-chevron-left {
+    transform: rotate(180deg);
+}
+
+/* Hover effect for the button */
+#sidebarToggle:hover {
+    background: #f8f9fa;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-280px);
+    }
+    
+    .flex-grow-1 {
+        margin-left: 0;
+    }
+    
+    #sidebarToggle {
+        left: 0;
+        display: flex !important; /* Force display on mobile */
+        z-index: 1041; /* Ensure it's above other elements */
+    }
+    
+    .sidebar.mobile-show {
+        transform: translateX(0);
+    }
+    
+    .sidebar.mobile-show ~ div #sidebarToggle {
+        left: 280px;
+    }
+
+    /* Ensure the button stays visible */
+    .sidebar.collapsed ~ div #sidebarToggle {
+        left: 0;
+        display: flex !important;
+    }
+}
+
+/* Ensure button visibility at all screen sizes */
+@media (max-width: 576px) {
+    #sidebarToggle {
+        display: flex !important;
+        left: 0;
+    }
+    
+    .sidebar.mobile-show ~ div #sidebarToggle {
+        left: 280px;
+    }
+}
+
+
+.school-logo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.school-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ecef;
+}
+
+.no-logo i {
+    font-size: 2rem;
+    color: #6c757d;
+}
+
+
+.school-card {
+    transition: transform 0.2s;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.school-logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.default-logo {
+    font-size: 3rem;
+    color: #6c757d;
+}
+
+.school-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.school-info .info-item i {
+    min-width: 16px;
+}
+
+.school-info .info-item span {
+    font-size: 0.875rem;
+}
+
+.btn-group .btn {
+    flex: 1;
+}
+
+.btn-group form {
+    flex: 1;
+}
+
+.btn-group form .btn {
+    width: 100%;
+}
+
+.events-card {
+    height: 100%;
+}
+
+.event-item {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.event-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.event-title {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.event-details {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.event-description {
+    margin-top: 0.5rem;
+    color: #6c757d;
+}
+
+.events-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.events-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.events-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.events-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Pagination Styles */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-link {
+    color: #0d6efd;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 0.375rem 0.75rem;
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    color: #0a58ca;
+}
+
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    z-index: 3;
+}
+
+
+
+
+.card-title.course-name {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 30px);
+    display: inline-block;
+}
+
+.card-title.course-name:hover {
+    white-space: normal;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.dropdown {
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.add-course-btn {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.add-course-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+.cards {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Add hover effect to indicate clickable */
+.cards:hover::after {
+    content: "Click to view batches";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(var(--bs-primary-rgb), 0.9);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.875rem;
+    z-index: 2;
+}
+
+/* Ensure dropdown stays above the overlay */
+.dropdown {
+    position: relative;
+    z-index: 3;
+}
+
+.cards-body {
+    padding: 1.25rem;
+    position: relative;
+}
+
+
+
+/* Batch Card Styles */
+.batch-card {
+    border: none;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(179, 51, 51, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.batch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(179, 51, 51, 0.15);
+}
+
+/* Batch Status Badges */
+.badge.bg-warning {
+    background-color: var(--primary-hover) !important;
+    color: #fff;
+}
+
+.badge.bg-success {
+    background-color: var(--primary-color) !important;
+}
+
+.badge.bg-secondary {
+    background-color: var(--pastel-maroon) !important;
+}
+
+/* Progress Bar Styles */
+.progress {
+    border-radius: 10px;
+    height: 8px;
+    background-color: var(--primary-light);
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+.progress-bar.bg-success {
+    background-color: var(--primary-color) !important;
+}
+
+.progress-bar.bg-warning {
+    background-color: var(--primary-hover) !important;
+}
+
+.progress-bar.bg-danger {
+    background-color: var(--pastel-maroon) !important;
+}
+
+/* Enrollment Stats Section */
+.enrollment-stats {
+    background-color: var(--primary-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Calendar Icons */
+.bi-calendar-event,
+.bi-calendar-check {
+    color: var(--primary-color);
+}
+
+/* Batch Card Title */
+.batch-card .card-title {
+    color: #000;  /* Changed to black */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Batch Card Text */
+.batch-card .text-muted {
+    color: #6c757d !important;  /* Standard gray color */
+}
+
+/* Batch Card Dropdown */
+.batch-card .dropdown-menu {
+    box-shadow: 0 0.5rem 1rem rgba(179, 51, 51, 0.1);
+    border: none;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.batch-card .dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+    color: #000;  /* Changed to black */
+}
+
+.batch-card .dropdown-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.batch-card .dropdown-item.text-danger:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+/* Empty State */
+.text-center.py-5 .bi-calendar-x {
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+/* Batch Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--primary-light);
+}
+
+/* Form Controls in Modals */
+.form-control {
+    border-color: #ced4da;  /* Standard gray border */
+    border-radius: 0.375rem;
+    color: #000;  /* Changed to black */
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(179, 51, 51, 0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(179, 51, 51, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--pastel-maroon);
+    border-color: var(--pastel-maroon);
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Header Section */
+.header-section h4 {
+    color: #000;  /* Changed to black */
+}
+
+/* Link Colors */
+a {
+    color: #000;  /* Changed to black */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Pagination Colors */
+.pagination .page-link {
+    color: #000;  /* Changed to black */
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.pagination .page-link:hover {
+    color: var(--primary-color);
+    background-color: var(--primary-light);
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Form Label Colors */
+.form-label {
+    color: #000;  /* Changed to black */
+}
+
+/* Modal Title */
+.modal-title {
+    color: #000;  /* Changed to black */
+}
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--pastel-maroon) !important;
+}
+
+/* Small Text */
+small {
+    color: #6c757d;  /* Standard gray color */
+}
+
+/* Placeholder Color */
+::placeholder {
+    color: #6c757d !important;  /* Standard gray color */
+}
+
+/* Focus Outline */
+*:focus {
+    outline-color: var(--primary-color);
+}
